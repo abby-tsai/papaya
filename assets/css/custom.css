@@ -218,6 +218,9 @@ a:active {
 }
 
 @media (max-width: 767px) {
+  .bg-sand {
+    overflow: hidden;
+  }
   .bg-sand.bg-sand-top::before {
     content: none;
   }
