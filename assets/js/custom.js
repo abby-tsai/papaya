@@ -1,19 +1,19 @@
-// Mastert Slider
+// Master Slider
 var slider = new MasterSlider();
 slider.setup('masterslider', {
   width: 1920,
-  height: 768,
-  minHeight: 380,
+  height: 1080,
+  minHeight: 450,
   space: 0,
   start: 1,
   grabCursor: false,
-  layout: "fullscreen",
+  layout: "fillwidth",
   wheel: false,
   autoplay: false,
   instantStartLayers: true,
   loop: true,
   view: "basic",
-  instantStartLayers: true,
+  responsive: true
 });
 slider.control('arrows');
 
