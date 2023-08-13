@@ -219,8 +219,7 @@ a:active {
 
 @media (max-width: 767px) {
   .bg-sand.bg-sand-top::before {
-    height: 305px;
-    background-size: 1000px;
+    content: none;
   }
 }
 
@@ -569,7 +568,7 @@ start. index banner*/
 
   .ms-skin-black-1 .ms-nav-next, .ms-skin-black-1 .ms-nav-prev {
     margin: 0;
-    bottom: 0;
+    bottom: 20px;
     top: auto;
     width: 45px;
     height: 45px;
