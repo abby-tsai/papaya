@@ -1,21 +1,13 @@
 // loading
-function onReady(callback) {
-  var intervalId = window.setInterval(function() {
-    if (document.getElementsByTagName('body')[0] !== undefined) {
-      window.clearInterval(intervalId);
-      callback.call(this);
-    }
-  }, 1000);
-}
-
-function setVisible(selector, visible) {
-  document.querySelector(selector).style.display = visible ? 'block' : 'none';
-}
-
-onReady(function() {
-  setVisible('body', true);
-  setVisible('.spinner-loader', false);
+$(window).on('load', function () {
+  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
 });
+function removeLoader() {
+  $(".spinner-loader").fadeOut(500, function () {
+    // fadeOut complete. Remove the loading div
+    $(".spinner-loader").remove(); //makes page more lightweight 
+  });
+}
 
 // Master Slider
 var slider = new MasterSlider();
