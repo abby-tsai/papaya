@@ -1,13 +1,21 @@
 // loading
-document.onreadystatechange = function () {
-  if (document.readyState !== "complete") {
-    document.querySelector("body").style.visibility = "hidden";
-    document.querySelector(".spinner-loader").style.visibility = "visible";
-  } else {
-    document.querySelector(".spinner-loader").style.display = "none";
-    document.querySelector("body").style.visibility = "visible";
-  }
-};
+function onReady(callback) {
+  var intervalId = window.setInterval(function() {
+    if (document.getElementsByTagName('body')[0] !== undefined) {
+      window.clearInterval(intervalId);
+      callback.call(this);
+    }
+  }, 1000);
+}
+
+function setVisible(selector, visible) {
+  document.querySelector(selector).style.display = visible ? 'block' : 'none';
+}
+
+onReady(function() {
+  setVisible('body', true);
+  setVisible('.spinner-loader', false);
+});
 
 // Master Slider
 var slider = new MasterSlider();
