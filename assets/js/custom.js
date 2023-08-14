@@ -1,13 +1,10 @@
 // loading
-$(window).on('load', function () {
-  setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
+document.querySelector(".spinner-loader").style.display = "flex";
+document.getElementById("wrapper").style.display = "none";
+window.addEventListener("DOMContentLoaded", function(){
+  document.getElementById("wrapper").style.display = "block";
+  document.querySelector(".spinner-loader").style.display = "none";
 });
-function removeLoader() {
-  $(".spinner-loader").fadeOut(500, function () {
-    // fadeOut complete. Remove the loading div
-    $(".spinner-loader").remove(); //makes page more lightweight 
-  });
-}
 
 // Master Slider
 var slider = new MasterSlider();
