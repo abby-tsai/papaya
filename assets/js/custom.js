@@ -1,3 +1,14 @@
+// loading
+document.onreadystatechange = function () {
+  if (document.readyState !== "complete") {
+    document.querySelector("body").style.visibility = "hidden";
+    document.querySelector(".spinner-loader").style.visibility = "visible";
+  } else {
+    document.querySelector(".spinner-loader").style.display = "none";
+    document.querySelector("body").style.visibility = "visible";
+  }
+};
+
 // Master Slider
 var slider = new MasterSlider();
 slider.setup('masterslider', {
