@@ -1,11 +1,3 @@
-// loading
-document.querySelector(".spinner-loader").style.display = "flex";
-document.getElementById("wrapper").style.display = "none";
-window.addEventListener("DOMContentLoaded", function(){
-  document.getElementById("wrapper").style.display = "block";
-  document.querySelector(".spinner-loader").style.display = "none";
-});
-
 // Master Slider
 var slider = new MasterSlider();
 slider.setup('masterslider', {
